@@ -1,10 +1,11 @@
 === WP Menu Image ===
-Contributors: yudiz, vaibhavgvb, richakalaria8795
+Contributors: yudiz, vaibhavgvb, richakalaria8795, mohitprajapati
 Donate link: 
 Tags: menu, image, icon, menu icon, menu image
-Requires at least: 3.3
-Tested up to: 6.5.2
-Stable tag: 2.2
+Requires at least: 3.6 or higher
+Tested up to: 6.7.1
+Requires PHP: 5.2.4 or higher
+Stable tag: 2.3
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -85,6 +86,11 @@ Yes, we provide dedicated support to assist you with any questions or issues you
 5. Frontend Look After Before Position
 
 == Changelog ==
+
+= 2.3 =
+Compatible with WordPress latest version 6.7.1
+CSS fixed
+Security Updates
 
 = 2.2 =
 Added Navigation menu Image tag Alt attribute

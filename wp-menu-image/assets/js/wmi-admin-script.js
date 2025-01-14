@@ -17,7 +17,7 @@ jQuery(document).ready( function($) {
                         jQuery('.upload-image-' + menu_id).remove();
                         jQuery('.menu-block-'+menu_id).append('<img class="menu-image upload-image-'+menu_id+'" src="'+attachment.url+'" width="90" height="90">');
                     }else{
-                        jQuery('#upload-image-'+ menu_id).before('<div class="menu-img-block menu-block-'+menu_id+'"><ul class="menu-actions"><li><a href="javascript:void(0);" class="edit-btn" id="upload-image-'+menu_id+' data-id="'+menu_id+'"><img src="'+editimg+'" alt="edit"></a></li> <li><a href="javascript:void(0);" class="close-btn"><img src="'+deleteimg+'" alt="delete"></li></ul> <img class="menu-image upload-image-'+menu_id+'" src="'+attachment.url+'" width="120" height="120"></div>');
+                        jQuery('#upload-image-'+ menu_id).before('<div class="menu-img-block menu-block-'+menu_id+'"><ul class="menu-actions"><li><a href="javascript:void(0);" class="edit-btn" id="upload-image-'+menu_id+' data-id="'+menu_id+'"><img src="'+deleteimg_ajax.edit_img+'" alt="edit"></a></li> <li><a href="javascript:void(0);" class="close-btn"><img src="'+deleteimg_ajax.deleteimg+'" alt="delete"></li></ul> <img class="menu-image upload-image-'+menu_id+'" src="'+attachment.url+'" width="120" height="120"></div>');
                     }
                     jQuery('div.menu-img-block').css('display','block');
                     jQuery('.img_txt-' + menu_id).val(attachment.url);
@@ -44,8 +44,17 @@ jQuery(document).ready( function($) {
         jQuery.ajax({
             type : 'POST',
             url : deleteimg_ajax.ajax_url,
-            data : { action : 'del_img', menu_id : menu_id },
-            success : function(data){   
+            data : { 
+                action : 'del_img', 
+                menu_id : menu_id,
+                nonce: deleteimg_ajax.nonce // Include the nonce
+            },
+            success : function(response){   
+                if (response.success) {
+                    //alert('Image deleted successfully');
+                } else {
+                    //alert('Error: ' + response.data);
+                }
             }
         });
     });
