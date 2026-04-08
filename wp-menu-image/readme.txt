@@ -1,10 +1,10 @@
 === WP Menu Image ===
-Contributors: yudiz, vaibhavgvb, richakalaria8795, mohitprajapati
+Contributors: yudiz, vaibhavgvb, richakalaria8795, mohitprajapati, sandeepghosh29mar
 Donate link: 
 Tags: menu, image, icon, menu icon, menu image
-Requires at least: 3.6 or higher
+Requires at least: 5.4
 Tested up to: 6.7.1
-Requires PHP: 5.2.4 or higher
+Requires PHP: 7.0
 Stable tag: 2.3
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
